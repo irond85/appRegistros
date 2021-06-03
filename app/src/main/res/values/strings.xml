@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">appRegistros</string>
+    <string name="txtCorreo">Correo Electrónico</string>
+    <string name="txtContraseña">Contraseña</string>
+    <string name="btnIngresar">Iniciar Sesión</string>
+    <string name="btnRecuperar">Recuperar Contraseña</string>
+    <string name="lblOlvidoContraseña">¿Olvidó su contraseña?</string>
+    <string name="cboxRecordar">Recordar Datos</string>
+    <string name="lblO">O</string>
+    <string name="lblOtroInicio">Iniciar sesión con:</string>
+    <string name="lblNoTienesCuenta">¿No tienes cuenta?</string>
+    <string name="lblRegistrarse">!Registrate Ahora¡</string>
+    <string name="lblNoExisteCorreo">El correo no existe!</string>
+    <string name="lblExisteCorreo">Enviamos un mensaje a su correo!</string>
+    <string name="lblAyuda">¿Necesitas Ayuda? Presiona aquí!</string>
+
+</resources>
