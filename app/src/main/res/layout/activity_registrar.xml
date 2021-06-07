@@ -25,10 +25,10 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrarse"
+            android:layout_gravity="center_vertical"
+            android:text="@string/lblRegistrarse"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
-            android:layout_gravity="center_vertical"/>
+            android:textSize="20sp" />
 
     </LinearLayout>
 
