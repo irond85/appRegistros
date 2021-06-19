@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputType;
 import android.util.Patterns;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -108,6 +109,15 @@ public class RegistrarActivity extends AppCompatActivity {
     public void LoginAct() {
         Intent Login = new Intent(this, LoginActivity.class);
         startActivity(Login);
+        finish();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            LoginAct();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     private boolean validarEmail(String email) {

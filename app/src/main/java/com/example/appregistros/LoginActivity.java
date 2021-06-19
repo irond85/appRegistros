@@ -101,18 +101,20 @@ public class LoginActivity extends AppCompatActivity {
         //Metodo para cambiar entre activity
         Intent Recuperar = new Intent(this,RecuperarActivity.class);
         startActivity(Recuperar);
+        finish();
     }
     
     public void RegistrarAct(){
         Intent Registro = new Intent(this,RegistrarActivity.class);
         startActivity(Registro);
+        finish();
     }
 
     public void Ingresar(){
         mail = txtMail.getText().toString();
         password = txtPass.getText().toString();
-       if(!validarEmail(mail) || password.equals("")){
-           if (!validarEmail(mail)){
+       if(!ValidarEmail(mail) || password.equals("")){
+           if (!ValidarEmail(mail)){
                txtMail.setError("Email no válido");
            }
            if(password.equals("")){
@@ -120,15 +122,22 @@ public class LoginActivity extends AppCompatActivity {
            }
        }else {
            //Acá va la validación con la base de datos o el firebase Auth para entrar a la app
-           if(mail.equals("admin@admin.com") && password.equals("1234")){
+           /*if(mail.equals("admin@admin.com") && password.equals("1234")){
                Toast.makeText(this, "Bienvenido Iron", Toast.LENGTH_SHORT).show();
-               if(!cboxRecordarDatos.isChecked()){
+               */if(!cboxRecordarDatos.isChecked()){
                    LimpiarLogin();
                }
-           }else {
+               MainAct();
+           /*}else {
                Toast.makeText(this, "Usuario no existente por favor registrese!", Toast.LENGTH_SHORT).show();
-           }
+           }*/
        }
+    }
+
+    public void MainAct(){
+        Intent Main = new Intent(LoginActivity.this,MainActivity.class);
+        startActivity(Main);
+        finish();
     }
 
     public void LimpiarLogin(){
@@ -136,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
         txtPass.setText("");
     }
 
-    public boolean validarEmail(String mail) {
+    public boolean ValidarEmail(String mail) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         return pattern.matcher(mail).matches();
     }

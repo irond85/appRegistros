@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
-            android:tint="@color/colorPrimaryDark"
+            app:tint="@color/colorPrimaryDark"
             app:srcCompat="@drawable/abc_vector_test" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/lblRegistrarse"
+            android:text="@string/textoRegistrarse"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
 
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorBlack"
             android:ems="10"
-            android:hint="Nombre"
+            android:hint="@string/txtNombre"
             android:inputType="textPersonName"
             android:textColor="@color/colorBlack"
             android:textColorHint="#595353" />
@@ -114,7 +114,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/colorBlack"
                 android:ems="10"
-                android:hint="Repetir Contraseña"
+                android:hint="@string/txtRepetirContraseña"
                 android:inputType="textPassword"
                 android:textColor="@color/colorBlack"
                 android:textColorHint="#595353" />
@@ -147,9 +147,10 @@
             android:id="@+id/btnRegistrarse"
             android:layout_width="347dp"
             android:layout_height="39dp"
-            android:background="@drawable/button_rounded"
-            android:text="Registrarse"
-            android:textColor="@color/colorWhite" />
+            android:background="@drawable/button_rounded_border"
+            android:text="@string/textoRegistrarse"
+            android:textColor="@color/colorPrimary"
+            android:theme="@style/BotonRaised"/>
 
         <Space
             android:layout_width="match_parent"

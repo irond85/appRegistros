@@ -13,5 +13,9 @@
     <string name="lblNoExisteCorreo">El correo no existe!</string>
     <string name="lblExisteCorreo">Enviamos un mensaje a su correo!</string>
     <string name="lblAyuda">¿Necesitas Ayuda? Presiona aquí!</string>
+    <string name="textoRegistrarse">Registrarse</string>
+    <string name="txtRepetirContraseña">Repetir Contraseña</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="textoInicio">Bienvenido</string>
 
 </resources>

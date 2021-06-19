@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Patterns;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,19 +62,28 @@ public class RecuperarActivity extends AppCompatActivity {
     }
 
     //Metodos
-    private boolean validarEmail(String mail) {
+    private boolean ValidarEmail(String mail) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         return pattern.matcher(mail).matches();
     }
 
     public void LoginAct() {
-        Intent Login = new Intent(this, LoginActivity.class);
+        Intent Login = new Intent(RecuperarActivity.this, LoginActivity.class);
         startActivity(Login);
+        finish();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            LoginAct();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void Recuperar() {
         String mail = txtCorreo.getText().toString();
-        if (!validarEmail(mail)){
+        if (!ValidarEmail(mail)){
             txtCorreo.setError("Email no válido");
         }else {
             if(mail.equals("admin@admin.com")){

@@ -18,12 +18,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
-            android:tint="@color/colorPrimaryDark"
+            app:tint="@color/colorPrimaryDark"
             app:srcCompat="@drawable/abc_vector_test" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Recuperar Contraseña"
@@ -82,9 +82,9 @@
             android:id="@+id/btnRecuperar"
             android:layout_width="347dp"
             android:layout_height="39dp"
-            android:background="@drawable/button_rounded"
+            android:background="@drawable/button_rounded_border"
             android:text="@string/btnRecuperar"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorPrimary"
             android:typeface="normal" />
 
         <Space
