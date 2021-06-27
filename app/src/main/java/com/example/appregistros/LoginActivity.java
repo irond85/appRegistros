@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 txtMail.setError(null);
                 txtPass.setError(null);
-                Ingresar();
+                MainAct();
             }
         });
 
