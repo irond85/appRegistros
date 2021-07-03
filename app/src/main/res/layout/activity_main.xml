@@ -10,7 +10,7 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swpActualizar"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="400dp"
         android:background="@color/colorAccent">
 
         <TextView
@@ -24,11 +24,41 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <Space
-        android:id="@+id/space1"
-        android:layout_below="@id/swpActualizar"
+    <ListView
+        android:id="@+id/lstDatos"
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swpActualizar"
+        android:background="@color/colorPrimaryLight" >
+
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+
+
+        //EN ESTA SECCION ESTOY INTENTANDO COLOCAR EL TEXTO DEBAJO DEL ICONO, SIN TERMINAR
+        <Button
+            android:id="@+id/btnOpciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_user_settings_foreground"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="false"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"/>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregar"
@@ -36,18 +66,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
+        android:background="@color/colorBlack"
+        app:backgroundTint="@color/colorPrimary"
         app:fabCustomSize="70dp"
-        app:fabSize="normal"
-
+        android:src="@mipmap/ic_add_foreground"
+        app:fabSize="auto"
+        app:maxImageSize="95dp"
         tools:layout_editor_absoluteX="167dp"
         tools:layout_editor_absoluteY="414dp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/fabAgregar"/>
-
-
 
 </RelativeLayout>

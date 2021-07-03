@@ -145,12 +145,13 @@
 
         <Button
             android:id="@+id/btnRegistrarse"
+            style="@style/BotonRaised"
             android:layout_width="347dp"
             android:layout_height="39dp"
             android:background="@drawable/button_rounded_border"
             android:text="@string/textoRegistrarse"
             android:textColor="@color/colorPrimary"
-            android:theme="@style/BotonRaised"/>
+            android:theme="@style/BotonRaised" />
 
         <Space
             android:layout_width="match_parent"
