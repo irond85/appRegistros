@@ -3,7 +3,7 @@
     <string name="txtCorreo">Correo Electrónico</string>
     <string name="txtContraseña">Contraseña</string>
     <string name="btnIngresar">Iniciar Sesión</string>
-    <string name="btnRecuperar">Recuperar Contraseña</string>
+    <string name="texto_recuperar">Recuperar Contraseña</string>
     <string name="lblOlvidoContraseña">¿Olvidó su contraseña?</string>
     <string name="cboxRecordar">Recordar Datos</string>
     <string name="lblO">O</string>
@@ -12,10 +12,12 @@
     <string name="lblRegistrarse">!Registrate Ahora¡</string>
     <string name="lblNoExisteCorreo">El correo no existe!</string>
     <string name="lblExisteCorreo">Enviamos un mensaje a su correo!</string>
-    <string name="lblAyuda">¿Necesitas Ayuda? Presiona aquí!</string>
-    <string name="textoRegistrarse">Registrarse</string>
+    <string name="texto_ayuda">¿Necesitas Ayuda? Presiona aquí!</string>
+    <string name="texto_registrarse">Registrarse</string>
     <string name="txtRepetirContraseña">Repetir Contraseña</string>
     <string name="txtNombre">Nombre</string>
-    <string name="textoInicio">Bienvenido</string>
+    <string name="texto_misgastos">Mis Gastos</string>
+    <string name="menu_acercade">Acerca de</string>
+    <string name="menu_opciones">Opciones</string>
 
 </resources>

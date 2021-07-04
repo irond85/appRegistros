@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 public class LoginActivity extends AppCompatActivity {
 
     //Declaracion de variables a utilizar
-    LottieAnimationView animOjo,animGoogle;
+    LottieAnimationView animOjo;
     EditText txtPass,txtMail;
     TextView lblRecuperar, lblCrearCuenta;
     Button btnIngresar;
@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
         cboxRecordarDatos = findViewById(R.id.checkBoxRecordarDatos);
         lblRecuperar = findViewById(R.id.lblOlvideContraseña);
         lblCrearCuenta = findViewById(R.id.lblCrearCuenta);
-        animGoogle = findViewById(R.id.animationViewGoogle);
         animOjo = findViewById(R.id.animationViewOjo);
 
         final boolean[] estHide = {false};
@@ -70,53 +69,50 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 txtMail.setError(null);
                 txtPass.setError(null);
-                MainAct();
+                //ingresar();
+                mainAct();
             }
         });
 
         lblRecuperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RecuperarAct();
+                recuperarAct();
             }
         });
 
         lblCrearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RegistrarAct();
-            }
-        });
-
-        animGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Crear proceso para iniciar sesión con Google
-                Toast.makeText(LoginActivity.this, "Vas a iniciar sesión con Google salu3", Toast.LENGTH_SHORT).show();
+                registrarAct();
             }
         });
 
     }
 
     //Métodos que serán llamados en algún momento
-    public void RecuperarAct() {
+    public void recuperarAct() {
         //Metodo para cambiar entre activity
+        txtMail.setError(null);
+        txtPass.setError(null);
         Intent Recuperar = new Intent(this,RecuperarActivity.class);
         startActivity(Recuperar);
         finish();
     }
     
-    public void RegistrarAct() {
+    public void registrarAct() {
+        txtMail.setError(null);
+        txtPass.setError(null);
         Intent Registro = new Intent(this,RegistrarActivity.class);
         startActivity(Registro);
         finish();
     }
 
-    public void Ingresar() {
+    public void ingresar() {
         mail = txtMail.getText().toString();
         password = txtPass.getText().toString();
-       if(!ValidarEmail(mail) || password.equals("")) {
-           if (!ValidarEmail(mail)){
+       if(!validarEmail(mail) || password.equals("")) {
+           if (!validarEmail(mail)){
                txtMail.setError("Email no válido");
            }
            if(password.equals("")) {
@@ -127,56 +123,33 @@ public class LoginActivity extends AppCompatActivity {
            /*if(mail.equals("admin@admin.com") && password.equals("1234")){
                Toast.makeText(this, "Bienvenido Iron", Toast.LENGTH_SHORT).show();*/
                if(!cboxRecordarDatos.isChecked()) {
-                   LimpiarLogin();
+                   limpiarLogin();
                }else if(cboxRecordarDatos.isChecked()){
-                   RecordarDatos();
                    Toast.makeText(this, "Entra al if del recordar ok", Toast.LENGTH_SHORT).show();
                }
-               MainAct();
+               mainAct();
            /*}else {
                Toast.makeText(this, "Usuario no existente por favor registrese!", Toast.LENGTH_SHORT).show();
            }*/
        }
     }
 
-    public void MainAct() {
+    public void mainAct() {
+        txtMail.setError(null);
+        txtPass.setError(null);
         Intent Main = new Intent(LoginActivity.this,MainActivity.class);
         startActivity(Main);
         finish();
     }
 
-    public void LimpiarLogin() {
+    public void limpiarLogin() {
         txtMail.setText("");
         txtPass.setText("");
     }
 
-    public boolean ValidarEmail(String mail) {
+    public boolean validarEmail(String mail) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         return pattern.matcher(mail).matches();
     }
 
-    public void RecordarDatos() {
-        //RECORDAR DATOS CON SHAREDPREFERENCES PARA GUARDARLO EN EL DISPOSITIVO
-        SharedPreferences recordarDatos = getSharedPreferences("DatosUsuarios", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = recordarDatos.edit();
-
-        String mail = txtMail.getText().toString();
-        String password = txtPass.getText().toString();
-
-        editor.putString("Correo", mail);
-        editor.putString("Password", password);
-
-        editor.commit();
-        Toast.makeText(this, "Se han guardado los datos", Toast.LENGTH_SHORT).show();
-    }
-
-    public void MostrarDatos() {
-        SharedPreferences recordarDatos = getSharedPreferences("DatosUsuarios", Context.MODE_PRIVATE);
-
-        String correoRecordado = recordarDatos.getString("Correo", "");
-        String passRecordado = recordarDatos.getString("Password", "");
-
-        txtMail.setText(correoRecordado);
-        txtPass.setText(passRecordado);
-    }
 }
