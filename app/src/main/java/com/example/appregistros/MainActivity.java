@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.View;
 import android.widget.Toast;
 
 
@@ -49,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
         //ACA AGREGAMOS EL METODO OBVIA XD
         swpActualizar.setOnRefreshListener(this::actualizar);
 
-        fabAgregar.setOnClickListener(view -> Snackbar.make(view, "Le diste al boton flotante", Snackbar.LENGTH_LONG)
+        fabAgregar.setOnClickListener(view -> /*Snackbar.make(view, "Le diste al boton flotante", Snackbar.LENGTH_LONG)
                 .setAnchorView(fabAgregar)
                 .setAction("Accion", view1 -> Toast.makeText(MainActivity.this, "Funciona la accion del snackbar", Toast.LENGTH_SHORT).show())
                 .setActionTextColor(getResources().getColor(R.color.colorPrimary))
-                .show());
+                .show()*/ agregarAct());
     }
 
     @Override
@@ -66,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     public void loginAct(){
         Intent Login = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(Login);
+        finish();
+    }
+
+    public void agregarAct() {
+        Intent add = new Intent(MainActivity.this, AgregarActivity.class);
+        startActivity(add);
         finish();
     }
 

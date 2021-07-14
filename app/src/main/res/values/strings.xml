@@ -19,5 +19,7 @@
     <string name="texto_misgastos">Mis Gastos</string>
     <string name="menu_acercade">Acerca de</string>
     <string name="menu_opciones">Opciones</string>
+    <string name="texto_agregar">Agregar registro</string>
+    <string name="hint_descripcion">Descripción</string>
 
 </resources>

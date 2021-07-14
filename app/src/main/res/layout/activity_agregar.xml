@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarActivity"
+    android:background="@color/colorAccent">
+
+    <include android:id="@+id/actionBar"
+        layout="@layout/actionbar">
+
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:id="@+id/space0"
+            android:layout_width="match_parent"
+            android:layout_height="65dp" />
+
+        <EditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space0"
+            android:hint="@string/hint_descripcion"
+            android:textColorHighlight="@color/colorGrey"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGrey"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:inputType="text"/>
+
+        <Space
+            android:id="@+id/spaceDescripcion"
+            android:layout_below="@id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDeudas"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@id/spaceDescripcion"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/colorPrimaryLight"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgDeuda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_deuda_foreground"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_toEndOf="@id/imgDeuda"
+                    android:id="@+id/txtDeuda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deudas"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="32sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bancarias, personas, vehiculares, etc."
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@id/imgDeuda"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/txtDeuda"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/space1"
+            android:layout_below="@id/cvDeudas"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvSalidas"
+            android:layout_below="@id/space1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            card_view:cardBackgroundColor="@color/colorPrimaryLight"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgFactura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_facturas_foreground"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_toEndOf="@id/imgFactura"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtFacturas"
+                    android:layout_height="wrap_content"
+                    android:text="Facturas"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="32sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Servicios, arriendos, administración, etc."
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@id/imgFactura"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/txtFacturas"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_below="@id/cvSalidas"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvCompras"
+            android:layout_below="@id/space2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            card_view:cardBackgroundColor="@color/colorPrimaryLight"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgCompras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_compras_foreground"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_toEndOf="@id/imgCompras"
+                    android:id="@+id/txtCompras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compras"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="32sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ropa, mercado, objetos, etc."
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@id/imgCompras"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/txtCompras"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="match_parent"
+            android:layout_below="@id/cvCompras"
+            android:layout_height="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvOtros"
+            android:layout_below="@id/space3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            card_view:cardBackgroundColor="@color/colorPrimaryLight"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgOtros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_otros_foreground"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_toEndOf="@id/imgOtros"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtOtros"
+                    android:layout_height="wrap_content"
+                    android:text="Otros"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="32sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salidas a comer, a pasear, con amigos o familia, etc."
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@id/imgOtros"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/txtOtros"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
