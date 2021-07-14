@@ -1,67 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorAccent">
-
-    <include android:id="@+id/actionBar"
-        layout="@layout/actionbar">
-
-    </include>
-
-    <RelativeLayout
+    android:fillViewport="true">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:background="@color/colorAccent">
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swpActualizar"
+        <include android:id="@+id/actionBar"
+            layout="@layout/actionbar">
+
+        </include>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:background="@color/colorAccent">
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
 
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/graficoPastel"
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swpActualizar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="350dp"
+                android:layout_marginTop="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorAccent">
 
-            </com.github.mikephil.charting.charts.PieChart>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/graficoPastel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.github.mikephil.charting.charts.PieChart>
 
 
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-        <ListView
-            android:id="@+id/lstDatos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/swpActualizar"
-            android:background="@color/colorPrimaryLight" >
+            <ListView
+                android:id="@+id/lstDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/swpActualizar"
+                android:background="@color/colorPrimaryLight" >
 
-        </ListView>
+            </ListView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAgregar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAgregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
 
-            android:background="@color/colorBlack"
-            app:backgroundTint="@color/colorPrimary"
-            app:fabCustomSize="55dp"
-            android:elevation="6dp"
-            android:src="@mipmap/ic_add_foreground"
-            style="@style/Widget.Design.FloatingActionButton"
-            app:fabSize="auto"
-            app:maxImageSize="80dp" />
+                android:background="@color/colorBlack"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabCustomSize="70dp"
+                android:elevation="6dp"
+                android:src="@mipmap/ic_add_foreground"
+                style="@style/Widget.Design.FloatingActionButton"
+                app:fabSize="auto"
+                app:maxImageSize="100dp"
+                android:contentDescription="@string/todo" />
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>

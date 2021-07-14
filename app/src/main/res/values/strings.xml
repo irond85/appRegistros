@@ -21,5 +21,6 @@
     <string name="menu_opciones">Opciones</string>
     <string name="texto_agregar">Agregar registro</string>
     <string name="hint_descripcion">Descripción</string>
+    <string name="todo">TODO</string>
 
 </resources>

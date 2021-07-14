@@ -19,6 +19,8 @@ public class AgregarActivity extends AppCompatActivity {
 
         miActionBar = findViewById(R.id.actionBar);
         setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
     }

@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     public void agregarAct() {
         Intent add = new Intent(MainActivity.this, AgregarActivity.class);
         startActivity(add);
-        finish();
     }
 
     //METODO PARA REGRESAR
