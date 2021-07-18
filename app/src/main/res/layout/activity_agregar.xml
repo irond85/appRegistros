@@ -20,12 +20,12 @@
         <Space
             android:id="@+id/space0"
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
+            android:layout_height="55dp" />
 
         <EditText
             android:id="@+id/txtDescripcion"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_below="@id/space0"
             android:hint="@string/hint_descripcion"
             android:textColorHighlight="@color/colorGrey"
@@ -41,7 +41,7 @@
             android:id="@+id/spaceDescripcion"
             android:layout_below="@id/txtDescripcion"
             android:layout_width="match_parent"
-            android:layout_height="20dp"/>
+            android:layout_height="15dp"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvDeudas"
                     android:layout_width="match_parent"
-                    android:layout_height="125dp"
+                    android:layout_height="120dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     app:cardBackgroundColor="@color/colorPrimaryLight"
@@ -85,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:text="Deudas"
                             android:fontFamily="sans-serif-black"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="20dp"
                             android:textSize="32sp"
                             android:textColor="@color/colorBlack"/>
@@ -114,7 +114,7 @@
                     android:id="@+id/cvFacturas"
 
                     android:layout_width="match_parent"
-                    android:layout_height="125dp"
+                    android:layout_height="120dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     card_view:cardBackgroundColor="@color/colorPrimaryLight"
@@ -141,7 +141,7 @@
                             android:layout_height="wrap_content"
                             android:text="Facturas"
                             android:fontFamily="sans-serif-black"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="20dp"
                             android:textSize="32sp"
                             android:textColor="@color/colorBlack"/>
@@ -168,9 +168,8 @@
                 <androidx.cardview.widget.CardView
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cvCompras"
-
                     android:layout_width="match_parent"
-                    android:layout_height="125dp"
+                    android:layout_height="120dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     card_view:cardBackgroundColor="@color/colorPrimaryLight"
@@ -197,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:text="Compras"
                             android:fontFamily="sans-serif-black"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="15dp"
                             android:layout_marginStart="20dp"
                             android:textSize="32sp"
                             android:textColor="@color/colorBlack"/>
@@ -224,9 +223,8 @@
                 <androidx.cardview.widget.CardView
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cvOtros"
-
                     android:layout_width="match_parent"
-                    android:layout_height="125dp"
+                    android:layout_height="120dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     card_view:cardBackgroundColor="@color/colorPrimaryLight"
@@ -253,7 +251,7 @@
                             android:layout_height="wrap_content"
                             android:text="Otros"
                             android:fontFamily="sans-serif-black"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="20dp"
                             android:textSize="32sp"
                             android:textColor="@color/colorBlack"/>
@@ -270,6 +268,161 @@
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rlPadnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtCantidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="end"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:background="@color/colorWhite"
+                        android:text="4123124"
+                        android:textSize="36sp"/>
+
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="1"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toStartOf="@id/btn2"
+                        android:layout_below="@id/txtCantidad"
+                        android:textColor="@color/colorBlack"/>
+
+                    <Button
+                        android:id="@+id/btn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="2"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/txtCantidad"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorBlack"/>
+
+                    <Button
+                        android:id="@+id/btn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="3"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/txtCantidad"
+                        android:layout_toEndOf="@id/btn2"/>
+
+                    <Button
+                        android:id="@+id/btn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="4"
+                        android:textSize="24sp"
+                        android:layout_toStartOf="@id/btn5"
+                        android:layout_below="@id/btn1"
+                        android:textColor="@color/colorBlack"/>
+
+                    <Button
+                        android:id="@+id/btn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="5"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/btn2" />
+
+                    <Button
+                        android:id="@+id/btn6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="6"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/btn3"
+                        android:layout_toEndOf="@id/btn5" />
+
+                    <Button
+                        android:id="@+id/btn7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="7"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_toStartOf="@id/btn8"
+                        android:layout_below="@id/btn4" />
+
+                    <Button
+                        android:id="@+id/btn8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="8"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/btn5"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:id="@+id/btn9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="9"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/btn6"
+                        android:layout_toEndOf="@id/btn8" />
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorRed"
+                        android:text="X"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_toStartOf="@id/btn0"
+                        android:layout_below="@id/btn8" />
+
+                    <Button
+                        android:id="@+id/btn0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/btn7"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:id="@+id/btnBorrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:backgroundTint="@color/colorSecondaryLight"
+                        android:text="Borrar"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@id/btn9"
+                        android:layout_toEndOf="@id/btn8" />
+
+                </RelativeLayout>
 
             </LinearLayout>
         </ScrollView>

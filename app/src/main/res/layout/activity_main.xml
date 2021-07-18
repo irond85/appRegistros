@@ -59,7 +59,7 @@
                 android:layout_centerHorizontal="true"
 
                 android:background="@color/colorBlack"
-                app:backgroundTint="@color/colorPrimary"
+                app:backgroundTint="@color/colorSecondary"
                 app:fabCustomSize="70dp"
                 android:elevation="6dp"
                 android:src="@mipmap/ic_add_foreground"
