@@ -22,5 +22,20 @@
     <string name="texto_agregar">Agregar registro</string>
     <string name="hint_descripcion">Descripción</string>
     <string name="todo">TODO</string>
+    <string name="textoGuardar">Guardar Registro</string>
+    <string name="texto1">1</string>
+    <string name="texto2">2</string>
+    <string name="texto3">3</string>
+    <string name="texto4">4</string>
+    <string name="texto5">5</string>
+    <string name="texto6">6</string>
+    <string name="texto7">7</string>
+    <string name="texto8">8</string>
+    <string name="texto9">9</string>
+    <string name="texto0">0</string>
+    <string name="textoBorrar">Borrar</string>
+    <string name="textoDescOtros">Salidas a comer, a pasear, con amigos o familia, etc.</string>
+    <string name="textoOtros">Otros</string>
+
 
 </resources>
